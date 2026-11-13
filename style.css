@@ -1,0 +1,627 @@
+/* CONFIGURAÇÕES GERAIS */
+:root {
+    --azul-escuro: #101d3a;
+    --azul: #1769e0;
+    --laranja: #ff7a00;
+    --amarelo: #ffc928;
+    --texto: #263247;
+    --cinza: #6b7280;
+    --fundo: #f5f7fb;
+}
+
+/* O Bootstrap já inclui o Reboot, que normaliza os estilos básicos.
+   Aqui ficam somente as personalizações próprias da TechStore Sports. */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background-color: #ffffff;
+}
+
+/* NAVBAR */
+.navbar-sports {
+    background-color: var(--azul-escuro);
+    padding: 15px 0;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    font-size: 1.45rem;
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand i,
+.footer-brand i {
+    color: var(--amarelo);
+}
+
+.navbar-brand span,
+.footer-brand span {
+    color: var(--amarelo);
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+}
+
+.navbar-sports .nav-link {
+    color: #e9eef8;
+    font-weight: 600;
+    margin: 0 5px;
+    transition: color 0.2s;
+}
+
+.navbar-sports .nav-link:hover,
+.navbar-sports .nav-link.active {
+    color: var(--amarelo);
+}
+
+.nav-button {
+    border: none;
+    border-radius: 30px;
+    padding: 10px 18px;
+}
+
+/* BANNER PRINCIPAL */
+.hero-section {
+    color: white;
+    background: linear-gradient(120deg, #10244b 0%, #1769e0 100%);
+    overflow: hidden;
+}
+
+.min-vh-hero {
+    min-height: 560px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background-color: rgba(255, 201, 40, 0.18);
+    color: var(--amarelo);
+    border: 1px solid rgba(255, 201, 40, 0.5);
+    border-radius: 30px;
+    padding: 8px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.8rem, 6vw, 4.7rem);
+    line-height: 1.05;
+    font-weight: 900;
+    margin: 22px 0;
+}
+
+.hero-text h1 span {
+    color: var(--amarelo);
+}
+
+.hero-text p {
+    color: #e0e9fb;
+    font-size: 1.12rem;
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 28px;
+}
+
+.hero-text .btn {
+    border-radius: 30px;
+    padding: 13px 24px;
+    border: none;
+}
+
+.hero-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 30px;
+    color: #eaf1ff;
+    font-size: 0.9rem;
+}
+
+.hero-benefits i {
+    color: var(--amarelo);
+    margin-right: 4px;
+}
+
+.hero-image {
+    position: relative;
+    padding: 20px 25px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 28px;
+    border: 7px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.hero-sticker {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: var(--amarelo);
+    color: var(--azul-escuro);
+    border-radius: 18px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: rotate(-5deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-sticker strong {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.hero-sticker span {
+    font-size: 0.7rem;
+    font-weight: 900;
+}
+
+/* FAIXA DE BENEFÍCIOS */
+.benefit-strip {
+    background-color: var(--amarelo);
+    color: var(--azul-escuro);
+    padding: 19px 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.benefit-strip i {
+    font-size: 1.15rem;
+    margin-right: 6px;
+}
+
+/* SEÇÕES */
+.section-padding {
+    padding: 85px 0;
+}
+
+.section-heading {
+    margin-bottom: 15px;
+}
+
+.eyebrow {
+    color: var(--laranja);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    color: var(--azul-escuro);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.section-heading h2 span {
+    color: var(--azul);
+}
+
+.section-heading p {
+    color: var(--cinza);
+    margin-bottom: 0;
+}
+
+/* CATEGORIAS */
+.category-card {
+    min-height: 205px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    padding: 22px 12px;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.category-card:hover {
+    color: white;
+    transform: translateY(-7px);
+    box-shadow: 0 15px 28px rgba(20, 35, 65, 0.18);
+}
+
+.category-card > i {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.category-card h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.category-card span {
+    font-size: 0.82rem;
+}
+
+.category-blue {
+    background: linear-gradient(135deg, #1769e0, #0d3e99);
+}
+
+.category-orange {
+    background: linear-gradient(135deg, #ff9b24, #f05b16);
+}
+
+.category-purple {
+    background: linear-gradient(135deg, #8b5cf6, #5930b5);
+}
+
+.category-green {
+    background: linear-gradient(135deg, #20b779, #087b60);
+}
+
+/* PRODUTOS */
+.products-section {
+    background-color: var(--fundo);
+}
+
+.product-card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 5px 22px rgba(22, 42, 75, 0.07);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(22, 42, 75, 0.13);
+}
+
+.product-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    background-color: #e9edf5;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+.product-badge {
+    position: absolute;
+    z-index: 1;
+    top: 13px;
+    left: 13px;
+    background-color: var(--azul);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: 900;
+}
+
+.badge-orange {
+    background-color: var(--laranja);
+}
+
+.badge-green {
+    background-color: #16a36b;
+}
+
+.product-card .card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-category {
+    color: var(--azul);
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 0.68rem;
+}
+
+.product-card .card-title {
+    color: var(--azul-escuro);
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 8px 0;
+}
+
+.product-card .card-text {
+    color: var(--cinza);
+    font-size: 0.88rem;
+    min-height: 43px;
+}
+
+.product-price {
+    color: var(--laranja);
+    font-size: 1.35rem;
+    font-weight: 900;
+    margin: 8px 0 15px;
+}
+
+.btn-product {
+    background-color: var(--azul);
+    color: white;
+    border-radius: 9px;
+    font-weight: bold;
+    margin-top: auto;
+    padding: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-product:hover {
+    background-color: var(--azul-escuro);
+    color: white;
+}
+
+/* BANNER SECUNDÁRIO */
+.promo-section {
+    padding: 65px 0;
+    background: linear-gradient(110deg, #ff7a00, #ffb21c);
+    color: white;
+}
+
+.promo-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.promo-content span {
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.promo-content h2 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin: 12px 0;
+}
+
+.promo-content p {
+    color: #fff8eb;
+}
+
+.promo-content .btn {
+    border-radius: 30px;
+    padding: 12px 22px;
+    color: var(--azul-escuro);
+}
+
+.promo-icon {
+    font-size: clamp(6rem, 15vw, 12rem);
+    opacity: 0.85;
+    margin-right: 5%;
+}
+
+/* GALERIA */
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 17px;
+    transition: transform 0.25s, filter 0.25s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+    filter: saturate(1.2);
+}
+
+.gallery-grid .gallery-large {
+    height: 250px;
+}
+
+/* RODAPÉ */
+.footer-sports {
+    background-color: var(--azul-escuro);
+    color: #dce5f5;
+    padding: 60px 0 22px;
+}
+
+.footer-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 1.55rem;
+    font-weight: 900;
+}
+
+.footer-description {
+    color: #aebbd1;
+    max-width: 370px;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+.footer-sports h5 {
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 9px;
+}
+
+.footer-links a {
+    color: #aebbd1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--amarelo);
+}
+
+.footer-sports p {
+    color: #aebbd1;
+    font-size: 0.9rem;
+}
+
+.footer-sports p i {
+    color: var(--amarelo);
+    margin-right: 7px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--azul);
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.social-links a:hover {
+    background-color: var(--laranja);
+    transform: translateY(-3px);
+}
+
+.footer-sports hr {
+    border-color: #52617b;
+    margin: 35px 0 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    color: #aebbd1;
+    font-size: 0.8rem;
+}
+
+/* AJUSTES PARA CELULARES E TABLETS */
+@media (max-width: 991px) {
+    .navbar-sports .navbar-collapse {
+        padding-top: 15px;
+    }
+
+    .navbar-sports .nav-button {
+        display: inline-block;
+        margin: 10px 0 0;
+    }
+
+    .min-vh-hero {
+        min-height: auto;
+    }
+
+    .hero-image {
+        margin-top: 35px;
+    }
+
+    .hero-image img {
+        height: 330px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-benefits {
+        justify-content: center;
+        gap: 10px;
+        font-size: 0.78rem;
+    }
+
+    .hero-image {
+        padding: 10px;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+
+    .hero-sticker {
+        right: -3px;
+        bottom: -5px;
+        padding: 10px 13px;
+    }
+
+    .hero-sticker strong {
+        font-size: 1.4rem;
+    }
+
+    .benefit-strip {
+        font-size: 0.76rem;
+    }
+
+    .category-card {
+        min-height: 165px;
+    }
+
+    .category-card > i {
+        font-size: 2.2rem;
+    }
+
+    .product-image {
+        height: 190px;
+    }
+
+    .promo-content {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .promo-icon {
+        display: none;
+    }
+
+    .gallery-grid img,
+    .gallery-grid .gallery-large {
+        height: 180px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
